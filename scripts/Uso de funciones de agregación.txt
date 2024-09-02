@@ -1,0 +1,4 @@
+Uso de funciones de agregación para ver el total de ventas
+
+SELECT SUM(total) AS total_ventas
+FROM Pedidos;
