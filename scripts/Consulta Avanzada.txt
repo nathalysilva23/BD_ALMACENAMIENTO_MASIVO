@@ -1,0 +1,17 @@
+La siguiente consulta muestra cuál es el producto más comprado por cada cliente, incluyendo el nombre del cliente, el producto, y la cantidad total comprada de ese producto.
+
+SELECT c.nombre AS nombre_cliente, 
+       p.nombre AS producto_mas_comprado, 
+       MAX(dp.cantidad) AS cantidad_total
+FROM Clientes c
+JOIN Pedidos pe ON c.id_cliente = pe.id_cliente
+JOIN DetallePedidos dp ON pe.id_pedido = dp.id_pedido
+JOIN Productos p ON dp.id_producto = p.id_producto
+GROUP BY c.id_cliente, p.id_producto
+HAVING MAX(dp.cantidad) = (
+    SELECT MAX(dp2.cantidad)
+    FROM Pedidos pe2
+    JOIN DetallePedidos dp2 ON pe2.id_pedido = dp2.id_pedido
+    WHERE pe2.id_cliente = c.id_cliente
+)
+ORDER BY c.nombre;
