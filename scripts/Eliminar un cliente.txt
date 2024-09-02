@@ -1,0 +1,6 @@
+Eliminar un cliente que no tiene pedidos
+
+DELETE FROM Clientes
+WHERE id_cliente = 3
+AND id_cliente NOT IN (SELECT id_cliente FROM Pedidos);
+
