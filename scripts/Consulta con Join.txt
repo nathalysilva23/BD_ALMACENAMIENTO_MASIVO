@@ -1,0 +1,7 @@
+Consulta con Join para mostrar pedidos y detalles de pedidos
+
+SELECT p.id_pedido, c.nombre AS cliente, pr.nombre AS producto, dp.cantidad, dp.precio_unitario, p.fecha
+FROM Pedidos p
+JOIN Clientes c ON p.id_cliente = c.id_cliente
+JOIN DetallePedidos dp ON p.id_pedido = dp.id_pedido
+JOIN Productos pr ON dp.id_producto = pr.id_producto;
