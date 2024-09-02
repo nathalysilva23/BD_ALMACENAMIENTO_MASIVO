@@ -1,0 +1,21 @@
+-- Insertar productos
+INSERT INTO Productos (nombre, descripcion, precio, stock) VALUES
+('Laptop', 'Laptop de alta gama', 1200.00, 10),
+('Mouse', 'Mouse inalámbrico', 20.00, 100),
+('Teclado', 'Teclado mecánico', 50.00, 50);
+
+-- Insertar clientes
+INSERT INTO Clientes (nombre, email, telefono) VALUES
+('Juan Pérez', 'juan.perez@example.com', '123456789'),
+('Maria García', 'maria.garcia@example.com', '987654321');
+
+-- Insertar pedidos
+INSERT INTO Pedidos (id_cliente, fecha, total) VALUES
+(1, '2024-09-01', 1220.00),
+(2, '2024-09-01', 50.00);
+
+-- Insertar detalles de pedidos
+INSERT INTO DetallePedidos (id_pedido, id_producto, cantidad, precio_unitario) VALUES
+(1, 1, 1, 1200.00),
+(1, 2, 1, 20.00),
+(2, 3, 1, 50.00);
