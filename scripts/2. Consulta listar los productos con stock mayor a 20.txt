@@ -1,0 +1,4 @@
+2. Listar los productos con stock mayor a 20
+
+
+SELECT * FROM productos WHERE stock > 20;
