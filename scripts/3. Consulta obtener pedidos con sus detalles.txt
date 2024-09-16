@@ -1,0 +1,6 @@
+3. Obtener pedidos con sus detalles
+
+SELECT p.id_pedido, p.fecha, c.nombre, dp.cantidad, dp.precio_unitario
+FROM pedidos p
+JOIN clientes c ON p.id_cliente = c.id_cliente
+JOIN detallepedidos dp ON p.id_pedido = dp.id_pedido;
