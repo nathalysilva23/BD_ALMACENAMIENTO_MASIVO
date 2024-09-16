@@ -1,0 +1,4 @@
+1. Obtener todos los clientes
+
+
+SELECT * FROM clientes;
