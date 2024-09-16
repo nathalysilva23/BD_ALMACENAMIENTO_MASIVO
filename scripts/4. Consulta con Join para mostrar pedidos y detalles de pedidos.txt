@@ -1,4 +1,4 @@
-Consulta con Join para mostrar pedidos y detalles de pedidos
+4. Consulta con Join para mostrar pedidos y detalles de pedidos
 
 SELECT p.id_pedido, c.nombre AS cliente, pr.nombre AS producto, dp.cantidad, dp.precio_unitario, p.fecha
 FROM Pedidos p

@@ -1,0 +1,5 @@
+5. Actualización de stock de un producto después de una venta
+
+UPDATE Productos
+SET stock = stock - 1
+WHERE id_producto = 1;
